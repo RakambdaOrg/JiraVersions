@@ -1,0 +1,13 @@
+# JiraVersions
+
+Permet de lister les versions qui ont été release lors du sprint en cours ou qui ne sont pas encore released
+
+## Environment
+
+Variables d'environment à remplir :
+
+* JIRA_SERVER : URL du serveur Jira
+* JIRA_MAIL : Mail du compte atlassian
+* JIRA_TOKEN : Personal Access Token obtenu depuis https://id.atlassian.com/manage-profile/security/api-tokens
+* JIRA_PROJECT_KEY : Key du projet Jira (ce qui préfixe les numéros des issues)
+* JIRA_BOARD_ID : ID do board contenant le sprint
