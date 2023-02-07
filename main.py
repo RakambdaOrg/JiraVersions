@@ -36,7 +36,7 @@ def main():
     print(f'|Date de MEP|Changement|Déployé|Description|')
     print(f'|:---------:|:--------:|:-----:|:----------|')
     for v in versions_to_keep:
-        print(f'| {v.releaseDate} | [{v.name}]({get_version_url(v, jira_server, jira_project_key)}) | {v.released} | {v.description if "description" in v.raw else ""} |')
+        print(f'| {v.releaseDate} | {get_version_url(v, jira_server, jira_project_key)} | {v.released} | {v.description if "description" in v.raw else ""} |')
 
 
 if __name__ == '__main__':
