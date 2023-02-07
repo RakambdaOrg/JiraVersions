@@ -1,6 +1,8 @@
 # JiraVersions
 
-Permet de lister les versions qui ont été release lors du sprint en cours ou qui ne sont pas encore released
+Permet de lister les versions qui ont été release lors du sprint en cours ou qui ne sont pas encore released.
+
+La sortie est un tableau Markdown, qui peut être facilement copié/collé dans Confluence.
 
 ## Environment
 
