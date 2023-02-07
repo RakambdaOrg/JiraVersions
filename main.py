@@ -33,10 +33,10 @@ def main():
     versions = jira_api.project_versions(jira_project_key)
     versions_to_keep = list(sorted(filter(lambda x: keep_version(x, sprint_start, sprint_end), versions), key=lambda x: x.releaseDate))
 
-    print(f'|Date de MEP|Changement|Déployé|Description|')
-    print(f'|:---------:|:--------:|:-----:|:----------|')
+    print(f'|Date de MEP|Changement|Description|')
+    print(f'|:---------:|:--------:|:----------|')
     for v in versions_to_keep:
-        print(f'| {v.releaseDate} | {get_version_url(v, jira_server, jira_project_key)} | {v.released} | {v.description if "description" in v.raw else ""} |')
+        print(f'| {v.releaseDate} | {get_version_url(v, jira_server, jira_project_key)} | {v.description if "description" in v.raw else ""} |')
 
 
 if __name__ == '__main__':
