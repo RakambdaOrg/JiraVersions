@@ -7,7 +7,7 @@ import datetime
 
 
 def keep_version(version: jira.resources.Version, start: datetime.datetime, end: datetime.datetime) -> bool:
-    if not version.released:
+    if not version.released and not version.archived:
         return True
     release_date = datetime.datetime.strptime(version.releaseDate, '%Y-%m-%d')
     return start <= release_date <= end
