@@ -13,3 +13,20 @@ Variables d'environment à remplir :
 * JIRA_TOKEN : Personal Access Token obtenu depuis https://id.atlassian.com/manage-profile/security/api-tokens
 * JIRA_PROJECT_KEY : Key du projet Jira (ce qui préfixe les numéros des issues)
 * JIRA_BOARD_ID : ID do board contenant le sprint
+
+## Docker-compose
+
+[source,yml]
+----
+version: '3'
+services:
+  jiraversions:
+    image: mrcraftcod/jira-versions:latest
+    container_name: jiraversions
+    environment:
+        - "JIRA_SERVER=https://jira.atlassian.net"
+        - "JIRA_MAIL=a@b.c"
+        - "JIRA_TOKEN=token"
+        - "JIRA_PROJECT_KEY=PRJ"
+        - "JIRA_BOARD_ID=123"
+----

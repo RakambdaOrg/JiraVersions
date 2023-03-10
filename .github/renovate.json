@@ -1,0 +1,12 @@
+{
+  "assignees": [
+    "Rakambda"
+  ],
+  "extends": [
+    "config:base"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "dependencyDashboard": false
+}
