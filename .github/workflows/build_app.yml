@@ -4,6 +4,10 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  packages: write
+  contents: read
+
 jobs:
   check:
     uses: RakambdaOrg/rakambda-github-workflows/.github/workflows/python-build.yml@main
@@ -16,7 +20,6 @@ jobs:
     if: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
     with:
       docker-image: ${{ vars.DOCKER_IMAGE }}
-      docker-tag: latest
     secrets:
       docker-repo: ${{ secrets.DOCKER_REPO }}
       docker-username: ${{ secrets.DOCKER_USERNAME }}
